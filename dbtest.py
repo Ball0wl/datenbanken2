@@ -10,8 +10,5 @@ zeiger.executemany("""
                 INSERT INTO personen 
                        VALUES (?,?,?)
                 """, beruehmtheiten)
-zeiger.execute("SELECT * FROM personen")
-inhalt = zeiger.fetchall()
-"""da wir nur daten fetchen/holen benötigen wir keine commit() anweisung."""
-print(inhalt)
+verbindung.commit()
 verbindung.close()
